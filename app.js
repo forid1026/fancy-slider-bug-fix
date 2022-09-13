@@ -159,14 +159,14 @@ sliderBtn.addEventListener("click", function () {
 const searchText = document.getElementById("search");
 searchText.addEventListener("keyup", (event) => {
   document.getElementById("error").innerHTML = "";
-  if (event.keyCode === 13) {
+  if (event.key === "Enter") {
     spinner("visible");
     const searchInput = event.target.value;
     console.log(event.target.value);
     getImages(searchInput);
     sliders.length = 0;
     searchText.value = "";
-  }
+  } 
 });
 
 const spinner = (style) => {
